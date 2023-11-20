@@ -1,0 +1,21 @@
+
+<%= form_with model: @attender do |form| %>
+  <div>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </div>
+
+<div>
+    <%= form.label :contact %><br>
+    <%= form.text_field :contact %>
+  </div>
+
+<div>
+    <%= form.label :age %><br>
+    <%= form.text_field :age %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

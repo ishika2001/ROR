@@ -1,0 +1,17 @@
+<h1>Hello User</h1>
+
+<p>
+A new <%= @object.class.to_s%> has been created!!
+</p>
+
+<% @object.attributes.each do|attr_key, attr_value|%>
+<p><strong><%= attr_key%>:<%= attr_value%></strong><%= attr_value%></p>
+<%end%>
+
+<h4><%= @object.class.to_s%> has total of 
+<%= @object.tickets.count%> no. of tickets</h4>
+<h4>Thanks!!</h4>
+
+
+
+

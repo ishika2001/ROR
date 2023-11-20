@@ -1,0 +1,15 @@
+
+<%= form_with model: @ticket do |form| %>
+  <div>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </div>
+
+<div>
+    <%= form.label :price %><br>
+    <%= form.text_field :price %>
+  </div><br>
+  <div>
+    <%= form.submit%>
+  </div><br>
+<% end %>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title class="title-name">EventManagement</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %> 
+    <%= javascript_importmap_tags %>
+    <%= stylesheet_link_tag "style", media: 'all'%>
+  </head>
+    <body>
+    <nav class="navbar navbar1 navbar-expand-lg navbar-light" id="navbar">
+    <div class="container-fluid">
+    <%if user_signed_in? %>
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+        <b><a class="navbar-brand title-name" href="#">Welcome <%= current_user.name.capitalize%></a></b>
+        </li>
+      </ul>    <%else %>
+        <a class="navbar-brand title-name" href="#">Event-Management</a>
+    <%end%>
+    <div class="last">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <%if user_signed_in? %><br>
+          <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/users/sign_out">Log-out</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/users/edit">Edit Profile</a>
+        </li>
+        <%else%>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/users/sign_in">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/users/sign_up">Sign-up</a>
+        </li>
+        <%end%> 
+      </ul>
+    </div>
+  </div>
+</nav>
+    </body>
+</html>

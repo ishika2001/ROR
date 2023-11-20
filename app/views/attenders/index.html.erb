@@ -1,0 +1,35 @@
+         
+
+ <div class="container">
+  <div class="row">
+    <div class="col">
+        <div><a class="nav-item text-secondary text-decoration-none common" href="/">Home</a></div>
+    </div>
+  </div>
+   <div class="row">
+    <div class="col">
+       <%if current_user.tickets.count==0%>
+              <h5 class="sorry">No Tickets available!!!</h5>
+              <%else%>
+              <h5 class="sorry">You have purchased <%= current_user.tickets.count%> tickets!</h5>
+              <% current_user.tickets.each do|ticket|%>
+              <div id = "two"> 
+               <header class="core text-secondary"><b><%= ticket.event.title.capitalize%></b></header>
+              <b>Ticket Name: </b><%= ticket.name %><br>
+              <b>Ticket Price: </b><%= ticket.price %>
+              <b><%= link_to "Download", download_pdf_path(ticket.id),  class: "down nav-item text-secondary text-decoration-none"%></b>
+              <div>
+              </div>
+              </div> 
+              <%end%>
+          <%end%>
+    </div>
+  </div>
+
+
+
+
+
+
+  
+</div>

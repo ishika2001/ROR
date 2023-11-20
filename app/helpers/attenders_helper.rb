@@ -1,0 +1,2 @@
+module AttendersHelper
+end

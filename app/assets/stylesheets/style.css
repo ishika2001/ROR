@@ -1,0 +1,95 @@
+.navbar1{
+  background-color: #7b52af !important;
+}
+
+.title-name{
+  color: white !important;
+}
+.hello{
+  color: blue;
+}
+.nav-link{
+  color: white !important;
+}
+table {
+  justify-content: start !important;
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding-left: 3px !important;
+  padding-right: 3px !important;
+  padding-top: 2px !important;
+  padding-bottom: 2px !important;
+}
+
+tr:nth-child(even) {
+  background-color: #ffffff;
+}
+.card{
+    box-shadow: 0px 0px;
+}
+.btn {
+  --bs-btn-padding-x: 0.25rem !important;
+  --bs-btn-padding-y: 0.250rem !important;
+}
+.sorry{
+  color: red !important;
+  margin-left: 10rem !important;
+}
+.sor{
+  margin-left: 12rem !important;
+}
+.last{
+  display: flex;
+  justify-content: end !important;
+}
+#one {  
+  border-radius: 20px !important;  
+  background: lightgreen;  
+  padding: 10px;  
+  margin: 10px;  
+  width: 200px;  
+  float: left;  
+  height: 140px;  
+  }  
+  #two {  
+    border-radius: 20px !important;  
+    background: rgb(248, 117, 9);  
+    padding: 10px;  
+    margin: 10px;  
+    width: 200px;  
+    float: left;  
+    height: 140px;  
+    } 
+  .book{
+    margin-left: 35px !important;
+  }
+.common{
+  margin-right: 2rem !important;
+}
+  .sidebar{
+    display: flex !important;
+  }
+  
+  .font{
+    font-size: smaller !important;
+  }
+  .core{
+    display: flex !important;
+    justify-content: center !important;
+  }
+  .cor{
+    margin-left: 3rem !important;
+  }
+  .down{
+    margin-left: 2.5rem !important;
+    color: white !important;
+  }
+  .comment{
+    background: antiquewhite !important;
+  }

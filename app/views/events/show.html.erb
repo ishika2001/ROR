@@ -1,0 +1,49 @@
+
+<div class="container mt-4">
+  <div class="row d-flex">
+      <div class="col justify-content-end">
+          <h1><%= @event.title.capitalize %></h1>
+          <p><b>Event Date: </b><%= @event.date %></p>
+          <p><b>Event Time: </b><%= @event.time %></p>
+          <p><b>Event Venue: </b><%= @event.venue %></p>
+          <p><b>Event Description: </b><%= @event.description %></p>
+          <div>
+              <%= link_to "All Events", "/users/sign_in",  class: "btn btn-secondary"%>
+          </div>
+      </div>    
+      <div class="col">
+          <div class="card m-2" style="width: 18rem;">
+            <img src="/assets/event_images/img2.avif" class="card-img-top" alt="...">
+          </div>
+          <%= form_with(model: [@event, Comment.new]) do |form| %>
+            <div>
+              <%= form.label :description %><br>
+              <%= form.text_area :description %><br>
+            </div>
+            <div>
+              <%= form.submit %>
+            </div>
+          <% end %>   
+      </div> 
+   </div>
+     <hr class=""/>
+   <div class="row mt-5">
+    <% @event.comments.each do|comment|%>
+      <div class="col">
+      <div class="card mb-1 comment" style="width: 16rem;">
+        <div class="card-body">
+          <p><b>Commenter: </b><%= comment.attender.name%></p>
+          <p><b>Comment: </b><%= comment.description%></p>
+            <p>
+                <%= link_to "Destroy Comment", comment.event, data: {
+                  turbo_method: :destroy,
+                  turbo_confirm: "Are you sure?"
+                } %>
+            </p>
+        </div>
+      </div>
+      </div>
+    <%end%> 
+</div>            
+  </div>
+</div>       
