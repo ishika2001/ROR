@@ -56,7 +56,12 @@
               <b>Ticket Price: </b><%= ticket.price %>
               <% if ticket.status=="not-booked"%>
                 <button type="button" class="btn btn-sm btn-secondary cor" onclick="myFunction(<%=ticket.id %>)">
-                  Book-Ticket
+                  <%
+=begin%>
+ Book-Ticket 
+<%
+=end%>
+    <%= link_to "Book Ticket", new_payment_path(event_id: @event.id), class: 'book'%>
                 </button>           
              <%else%>
                <button type="button" class="btn btn-sm btn-secondary cor">

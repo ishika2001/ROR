@@ -20,7 +20,7 @@ Rails.application.routes.draw do
   resources :organizers
   resources :attenders
   resources :users, only: [:index]
-
+  resources :payments
   resources :events do
     resources :comments
   end
@@ -33,6 +33,9 @@ Rails.application.routes.draw do
   get "/destroy", to: "tickets#destroy"
 
   get "/show", to: "comments#show"
+
+  #for web-hooks
+  post '/webhooks/stripe', to: 'webhooks#stripe'
 
   get "/attenders/show", to: "attenders#show"
   get "/tickets/show", to: "tickets#show"

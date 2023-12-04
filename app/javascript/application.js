@@ -5,3 +5,4 @@ import * as bootstrap from "bootstrap"
 import "@fortawesome/fontawesome-free"
 //= require jquery
 //= require jquery_ujs
+import "./channels"

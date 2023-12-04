@@ -8,7 +8,7 @@ Rails.application.configure do
   # since you don't have to restart the web server when you make code changes.
   config.cache_classes = false
   config.hosts << "http://127.0.0.1:3000/"
-
+  config.hosts.clear
   # Do not eager load code on boot.
   config.eager_load = false
 

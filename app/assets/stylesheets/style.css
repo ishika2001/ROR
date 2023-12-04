@@ -41,6 +41,10 @@ tr:nth-child(even) {
   color: red !important;
   margin-left: 10rem !important;
 }
+.sy{
+  color: #7b52af !important;
+  margin-left: 15rem !important;
+}
 .sor{
   margin-left: 12rem !important;
 }
@@ -92,4 +96,11 @@ tr:nth-child(even) {
   }
   .comment{
     background: antiquewhite !important;
+  }
+  .pay{
+    margin-left: 6rem !important;
+  }
+  .book{
+    text-decoration: none !important;
+    color: #dddddd !important;
   }

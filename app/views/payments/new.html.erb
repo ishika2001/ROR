@@ -1,0 +1,26 @@
+<!-- app/views/products/show.html.erb -->
+
+<div class="container">
+  <h1><%= @event.title.capitalize %></h1>
+  <div class="event-details">
+    <div class="event-image">
+    <%#= image_tag @event.image %>
+
+    </div>
+    <div class="event-description">
+      <%= @event.description %>
+    </div>
+    <div class="event-price">
+      <%
+=begin%>
+ <%= number_to_currency(@event.registration_fees, unit: '₹') %> 
+<%
+=end%>
+      <%= number_to_currency(1000, unit: '₹') %>
+    </div>
+  </div>
+</div>
+
+<div class="button-wrapper">
+  <a href="<%= @session.url %>" class="btn btn-primary pay">Pay </a>
+</div>

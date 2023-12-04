@@ -56,6 +56,9 @@ gem "rubocop"
 gem 'ransack'
 gem 'activeadmin'
 gem "sassc-rails"
+gem 'rails-i18n'
+gem 'httparty'
+gem 'stripe'
 # Use Sass to process CSS
 # gem "sassc-rails"
 

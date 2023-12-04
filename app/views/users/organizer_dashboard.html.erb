@@ -37,14 +37,10 @@
     <th>Venue</th>
     <th>Description</th>
     <th>actions</th>
-    <%
-=begin%>
- <th>Attenders</th> 
-<%
-=end%>
     <th>Tickets</th>
   </tr>
   <% current_user.events.each do |event|%>
+    <% cache event do %>
    <tr>
     <td><%= event.title%></td>
     <td><%= event.date%></td>
@@ -56,20 +52,11 @@
       <%= link_to "Edit", "/edit?id=#{event.id}",  class: "btn btn-secondary"%>
       <%= link_to "Delete", "/destroy?id=#{event.id}",  class: "btn btn-danger"%>
     </td>
-    <%
-=begin%>
- <td> <%= link_to "Attenders", "/attenders/show?id=#{event.id}",  class: "btn btn-secondary"%></td> 
-<%
-=end%>
     <td>
       <%= link_to "Tickets", "tickets/show?event_id=#{event.id}",  class: "btn btn-warning"%>
-      <%
-=begin%>
- <%= link_to "Attenders", "/attenders/show?id=#{event.id}",  class: "btn btn-secondary"%> 
-<%
-=end%>
     </td>
   </tr>
+    <% end %>
   <%end%>
 </table>
           </div>

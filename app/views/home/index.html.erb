@@ -1,7 +1,8 @@
 
 <div class="container mt-4">
 <div class="row mb-4">
-<h2><i><b class="sorry">Welcome to event Event-Management Platform</b></i></h2><br>
+<h2><i><b class="sorry">Welcome to Event-Management Platform</b></i></h2><br>
+ <h4><i><b class="sy"><%= t(:title)%></b></i></h4><br> 
  <div class="sor">
    <%= search_form_for @q, url: "/home", method: :get do |f| %>
       <%= f.label :"Search Event" %>
@@ -10,7 +11,7 @@
     <% end %>
     </div>
 </div>
- <div class="row  mt-4">
+ <div class="row  mt-8">
           <% @events.each do|event|%>
           <div class="col">
               <div class="card m-2" style="width: 18rem;">
